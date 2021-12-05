@@ -1,16 +1,17 @@
-# INPUT NUMBER OF EVEN NUMBERS
-def print_error_messages():  # function to print error message if user enters a negative number
-    print("Invalid number, please enter a Non-negative number!")
-    exit()
+# Very sort method to creat list of even number form a given list
+#Advance-Python
+list_number=list(map(int,input().split()))
+even_list=[i for i in list_number if i%2==0]
+print(even_list)
+exit()# Another one
+n = int(input("Enter the required range : "))  # user input
+list = []
 
+if (n < 0):
+    print("Not a valid number, please enter a positive number!")
+else:
+    for i in range(0,n+1):
+        if(i%2==0):
+            list.append(i)          #appending items to the initialised list getting from the 'if' statement
 
-n = int(input())  # user input
-start = 0
-
-if n < 0:
-    print_error_messages()
-
-for i in range(n):  # loop till the number n entered by the user
-    print(start)  # prints 0 first as it is an even number
-    start += 2  # increases the value of start by 2 to get to the next even number
-# even numbers are printed starting from 0
+print(list)
